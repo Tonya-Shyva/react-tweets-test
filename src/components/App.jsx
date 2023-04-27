@@ -1,16 +1,12 @@
+import 'modern-normalize/modern-normalize.css';
+import { UsersList } from './UsersList/UsersList';
+import { ScrollToTopButton } from './ScrollToTop/ScrollToTop';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      Hello world
-    </div>
+    <>
+      <UsersList />
+      <ScrollToTopButton />
+    </>
   );
 };
