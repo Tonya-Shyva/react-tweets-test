@@ -75,7 +75,6 @@ export const UsersList = () => {
 
   return (
     <>
-      {/*  */}
       {users.length > 0 ? (
         <Container>
           <Dropdown filter={filter} setFilter={setFilter} />
