@@ -12,16 +12,26 @@ export const UsersList = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(null);
+  const limit = 8;
 
-  const isDesktop = window.matchMedia('(min-width: 1440px)');
-  const limit = isDesktop ? 8 : 4;
+  useEffect(() => {
+    const getTotalUsers = async () => {
+      try {
+        const resp = await axios.get('/users');
+        setTotalPages(Math.ceil(Number(resp.data.length) / 8));
+      } catch (e) {
+        setError(e.message);
+      }
+    };
+    getTotalUsers();
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
     const getUsers = async () => {
       try {
         const resp = await axios.get(`/users?limit=${limit}&page=${page}`);
-        console.log(resp.data);
         setUsers(prev => [...prev, ...resp.data]);
         setIsLoading(false);
       } catch (e) {
@@ -34,7 +44,7 @@ export const UsersList = () => {
   const loadMoreHandler = () => {
     setPage(page + 1);
   };
-  console.log(users);
+
   return (
     <>
       {isLoading && <Loader />}
@@ -51,7 +61,7 @@ export const UsersList = () => {
               />
             ))}
           </UsersListStyled>
-          {users.length >= 4 && users.length < 24 && (
+          {users.length >= limit && totalPages !== page && (
             <Btn type="button" onClick={() => loadMoreHandler()}>
               {isLoading ? <Loader /> : <span>load more</span>}
             </Btn>
