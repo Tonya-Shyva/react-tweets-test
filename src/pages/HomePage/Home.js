@@ -5,7 +5,7 @@ export const Home = () => {
     <main>
       <Container>
         <h1>Welcome to the app Tweets of Users</h1>
-        <img src={image} alt="avatar boy" />
+        <img src={image} alt="avatar boy" width={60} height={60} />
       </Container>
     </main>
   );
