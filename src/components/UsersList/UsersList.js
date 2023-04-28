@@ -3,8 +3,8 @@ import axios from 'axios';
 import { UserCard } from 'components/UserCard/UserCard';
 import { Btn } from 'components/UserCard/UserCard.styled';
 import { Loader } from 'components/Loader/Loader';
-import { Container, EmptyText, UsersListStyled } from './UsersList.styled';
 import { Dropdown } from 'components/DropDown/DropDown';
+import { Container, EmptyText, UsersListStyled } from './UsersList.styled';
 
 axios.defaults.baseURL = 'https://64496b35e7eb3378ca491a1e.mockapi.io';
 
@@ -61,7 +61,6 @@ export const UsersList = () => {
   const followFilter = totalUsers.filter(
     ({ id }) => !idStorageFollowingUsers.includes(id)
   );
-  console.log(followFilter);
 
   const filterTweets = filter => {
     switch (filter) {
@@ -76,7 +75,7 @@ export const UsersList = () => {
 
   return (
     <>
-      {isLoading && <Loader />}
+      {/*  */}
       {users.length > 0 ? (
         <Container>
           <Dropdown filter={filter} setFilter={setFilter} />

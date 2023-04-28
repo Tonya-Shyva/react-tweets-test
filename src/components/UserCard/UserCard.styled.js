@@ -108,10 +108,11 @@ export const Btn = styled.button`
   border-color: transparent;
   border-radius: 10.3108px;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  transition: background-color 300ms linear;
+  transition: box-shadow 300ms linear;
   cursor: pointer;
 
-  &:hover {
-    background-color: #5cd3a8;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06);
   }
 `;

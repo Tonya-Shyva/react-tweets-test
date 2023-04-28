@@ -1,5 +1,5 @@
-import { Text } from 'components/UserCard/UserCard.styled';
 import styled from 'styled-components';
+import { Text } from 'components/UserCard/UserCard.styled';
 
 export const Container = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 30px;
 
   @media screen and (min-width: 400px) {
