@@ -1,23 +1,17 @@
-import { useState } from 'react';
-
 import {
   AvaFrame,
   AvaImg,
   BgImg,
   CardWrapper,
-  Btn,
   MiddleLine,
   Text,
-  TextList,
 } from './UserCard.styled';
 
 import bgImg from '../../images/bg.png';
 import defaultAva from '../../images/defaultAva.png';
+import { FollowBtn } from 'components/FollowBtn/FollowBtn';
 
-export const UserCard = ({ avatar, tweets, followers }) => {
-  const [first, setFirst] = useState(false);
-  const [isFollow, setIsFollow] = useState(false);
-
+export const UserCard = ({ id, avatar, tweets, followers }) => {
   return (
     <CardWrapper>
       <BgImg src={bgImg} alt="icons" />
@@ -26,18 +20,8 @@ export const UserCard = ({ avatar, tweets, followers }) => {
           <AvaImg src={avatar ? avatar : defaultAva} alt="user avatar" />
         </AvaFrame>
       </MiddleLine>
-      <TextList>
-        <li>
-          <Text>{tweets} tweets</Text>
-        </li>
-        <li>
-          <Text>{followers} followers</Text>
-        </li>
-      </TextList>
-
-      <Btn type="button" onClick={() => {}}>
-        <span>follow</span>
-      </Btn>
+      <Text>{tweets} tweets</Text>
+      <FollowBtn followers={followers} id={id} />
     </CardWrapper>
   );
 };

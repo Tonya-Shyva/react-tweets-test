@@ -47,6 +47,7 @@ export const UsersList = () => {
                 avatar={avatar}
                 tweets={tweets}
                 followers={followers}
+                id={id}
               />
             ))}
           </UsersListStyled>

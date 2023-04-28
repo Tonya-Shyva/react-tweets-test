@@ -65,8 +65,10 @@ export const AvaFrame = styled.div`
   border: 8px solid #ebd8ff;
   border-radius: 50%;
   box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.19582px 4.39163px #ae7be3,
-    inset 0px 4.39163px 3.29372px #fbf8ff;
+    inset-block 0px -2.19582px 4.39163px #ae7be3,
+    inset-block 0px 4.39163px 3.29372px #fbf8ff;
+  background-color: #5736a3;
+  z-index: 2;
 `;
 
 export const AvaImg = styled.img`
@@ -75,19 +77,6 @@ export const AvaImg = styled.img`
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
-`;
-
-export const TextList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
 `;
 
 export const Text = styled.p`
@@ -115,4 +104,9 @@ export const Btn = styled.button`
   border-color: transparent;
   border-radius: 10.3108px;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  transition: background-color 300ms linear;
+
+  &:hover {
+    background-color: #5cd3a8;
+  }
 `;
