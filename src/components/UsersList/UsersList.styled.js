@@ -1,3 +1,4 @@
+import { Text } from 'components/UserCard/UserCard.styled';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -32,6 +33,7 @@ export const Container = styled.div`
 
 export const UsersListStyled = styled.ul`
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 15px;
@@ -41,4 +43,9 @@ export const UsersListStyled = styled.ul`
     flex-direction: row;
     flex-wrap: wrap;
   }
+`;
+
+export const EmptyText = styled(Text)`
+  text-align: center;
+  color: #4b2a99;
 `;

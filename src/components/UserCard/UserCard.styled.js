@@ -5,7 +5,7 @@ export const CardWrapper = styled.li`
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 90%;
+  max-width: 90%;
   height: 460px;
   padding: 28px 36px 36px 36px;
   background: linear-gradient(
@@ -19,7 +19,7 @@ export const CardWrapper = styled.li`
   cursor: pointer;
 
   @media screen and (min-width: 400px) {
-    width: 380px;
+    max-width: 380px;
   }
 
   @media screen and (min-width: 768px) {
@@ -27,14 +27,18 @@ export const CardWrapper = styled.li`
   }
 
   @media screen and (min-width: 1440px) {
-    width: 335px;
+    max-width: 335px;
   }
 `;
 
 export const BgImg = styled.img`
-  width: 308px;
+  width: 80%;
   height: 168px;
   margin-bottom: 88px;
+
+  @media screen and (min-width: 400px) {
+    max-width: 308px;
+  }
 `;
 
 export const MiddleLine = styled.div`
@@ -105,6 +109,7 @@ export const Btn = styled.button`
   border-radius: 10.3108px;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   transition: background-color 300ms linear;
+  cursor: pointer;
 
   &:hover {
     background-color: #5cd3a8;

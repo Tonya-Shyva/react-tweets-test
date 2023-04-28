@@ -1,12 +1,19 @@
+import { Routes, Route } from 'react-router-dom';
+
 import 'modern-normalize/modern-normalize.css';
-import { UsersList } from './UsersList/UsersList';
-import { ScrollToTopButton } from './ScrollToTop/ScrollToTop';
+import { SharedLayout } from './SharedLayout/SharedLayout';
+import { Home } from 'pages/HomePage/Home';
+import { Tweets } from 'pages/TweetsPage/Tweets';
 
 export const App = () => {
   return (
     <>
-      <UsersList />
-      <ScrollToTopButton />
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/tweets" element={<Tweets />} />
+        </Route>
+      </Routes>
     </>
   );
 };

@@ -43,10 +43,7 @@ export const FollowBtn = ({ id, followers }) => {
       setIsFollowing(true);
       localStorage.setItem(
         FOLLOWING_KEY,
-        JSON.stringify([
-          ...following,
-          { id, storagedCount: followersCount + 1 },
-        ])
+        JSON.stringify([...following, { id, storageCount: followersCount + 1 }])
       );
       setFollowersCount(prevCount => prevCount + 1);
     }
@@ -58,7 +55,7 @@ export const FollowBtn = ({ id, followers }) => {
     <Wrapper>
       <Text>
         {followingList.length > 0
-          ? followingList[0].storagedCount.toLocaleString('en-US', {
+          ? followingList[0].storageCount.toLocaleString('en-US', {
               useGrouping: true,
             })
           : followersCount.toLocaleString('en-US', { useGrouping: true })}{' '}
