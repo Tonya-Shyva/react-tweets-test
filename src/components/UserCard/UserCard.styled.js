@@ -31,6 +31,14 @@ export const CardWrapper = styled.li`
   }
 `;
 
+export const LogoImg = styled.img`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 76px;
+  height: 22px;
+`;
+
 export const BgImg = styled.img`
   width: 80%;
   height: 168px;
