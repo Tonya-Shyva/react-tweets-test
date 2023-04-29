@@ -2,19 +2,13 @@ import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import 'modern-normalize/modern-normalize.css';
+import { Tweets } from 'pages/TweetsPage/Tweets';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 
 const Home = lazy(() =>
   import('pages/HomePage/Home').then(module => ({
     ...module,
     default: module.Home,
-  }))
-);
-
-const Tweets = lazy(() =>
-  import('pages/TweetsPage/Tweets').then(module => ({
-    ...module,
-    default: module.Tweets,
   }))
 );
 
