@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_tweets_test=self.webpackChunkreact_tweets_test||[]).push([[375],{375:function(e,t,s){s.r(t),s.d(t,{Home:function(){return a}});var r=s(689),n=s(626),c=s(184),a=function(){return(0,c.jsx)("main",{children:(0,c.jsxs)(r.W2,{children:[(0,c.jsx)("h1",{children:"Welcome to the app Tweets of Users"}),(0,c.jsx)("img",{src:n,alt:"avatar boy",width:60,height:60})]})})}}}]);
+//# sourceMappingURL=375.cc73f0c4.chunk.js.map
