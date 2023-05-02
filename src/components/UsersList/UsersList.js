@@ -17,14 +17,14 @@ export const UsersList = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
 
-  const limit = 8;
+  const limit = 6;
 
   useEffect(() => {
     const getTotalUsers = async () => {
       try {
         const resp = await axios.get('/users');
         setTotalUsers(resp.data);
-        setTotalPages(Math.ceil(Number(resp.data.length) / 8));
+        setTotalPages(Math.ceil(Number(resp.data.length) / 6));
       } catch (e) {
         setError(e.message);
       }

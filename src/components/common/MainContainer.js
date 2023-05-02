@@ -1,13 +1,8 @@
 import styled from 'styled-components';
-import image from '../../images/defaultAva.png';
 
-const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const MainContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
@@ -32,13 +27,3 @@ const HomeContainer = styled.div`
     padding-right: 20px;
   }
 `;
-export const Home = () => {
-  return (
-    <main>
-      <HomeContainer>
-        <h1>Welcome to the app Tweets of Users</h1>
-        <img src={image} alt="avatar boy" width={60} height={60} />
-      </HomeContainer>
-    </main>
-  );
-};

@@ -27,7 +27,7 @@ export const CardWrapper = styled.li`
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 335px;
+    max-width: 380px;
   }
 `;
 
@@ -64,7 +64,7 @@ export const MiddleLine = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    width: 335px;
+    width: 380px;
   }
 `;
 
@@ -116,11 +116,12 @@ export const Btn = styled.button`
   border-color: transparent;
   border-radius: 10.3108px;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 300ms linear;
+  transition: box-shadow 300ms linear, background-color 300ms linear;
   cursor: pointer;
 
   &:hover,
   &:focus {
+    background-color: #fff;
     box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06);
   }
 `;
